@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'common.apps.CommonConfig'
 ]
 
 
@@ -65,6 +66,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
+# Custom User Model
+# see https://docs.djangoproject.com/en/2.2/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project
+AUTH_USER_MODEL = 'common.CustomUser'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases

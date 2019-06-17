@@ -7,12 +7,13 @@ This is a simple template for quick kickstart of Django projects. The dependenci
 
 # Quick Start (Development)
 
-1. Rename the top-level `django-starter-template` or what you have clone as and directory `project` to your project name `<your_project>`
-  1. In `settings.py`, change the value of `ROOT_URLCONF` to `<your_project>.urls`
-  1. In `settings.py`, change the value of `WSGI_APPLICATION` to `<your_project>.wsgi.application`
+1. Rename the top-level `django-starter-template` or what you have clone as and directory `project` to your project name `<YourProject>`
+  1. In `settings.py`, change the value of `ROOT_URLCONF` to `<YourProject>.urls`
+  1. In `settings.py`, change the value of `WSGI_APPLICATION` to `<YourProject>.wsgi.application`
 1. Create an environment variable named `SECRET_KEY`
 1. Create an environment variable named `ENV` to `dev` if for development purpose
-1. In `pytest.ini`, change `DJANGO_SETTINGS_MODULE` to `<your_project>.settings`. Optionally, you can set `DJANGO_SETTINGS_MODULE` as an environment variable that points to your `settings` e.g. `<your_project>.settings`.
+1. In `pytest.ini`, change `DJANGO_SETTINGS_MODULE` to `<YourProject>.settings`. Optionally, you can set `DJANGO_SETTINGS_MODULE` as an environment variable that points to your `settings` e.g. `<YourProject>.settings`.
+1. Rename `CustomUser` in `common/models.py` to `<YourUserClass>` as this is the [recommended](https://docs.djangoproject.com/en/2.2/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) way to extend the default `User` class in the future.
 1. Run `pip install -r requirements/dev.txt` to install third-party dependencies
 
 # Guide
