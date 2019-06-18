@@ -7,7 +7,8 @@ This is a simple template for quick kickstart of Django projects. The dependenci
 
 # Quick Start (Development)
 
-1. Rename the top-level `django-starter-template` or what you have clone as and directory `project` to your project name `<YourProject>`
+1. Clone the project using `git clone`.
+1. Rename the top-level `django-starter-template` if you have not clone it as `<YourProject>` and directory `project` to your project name `<YourProject>`
   1. In `settings.py`, change the value of `ROOT_URLCONF` to `<YourProject>.urls`
   1. In `settings.py`, change the value of `WSGI_APPLICATION` to `<YourProject>.wsgi.application`
 1. Create an environment variable named `SECRET_KEY`
