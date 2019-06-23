@@ -14,8 +14,11 @@ if SECRET_KEY is None:
 DEBUG = True if os.getenv('ENV') == 'dev' else False
 
 # In dev mode, only localhost can access the development server
+
+INTERNAL_IPS = ['localhost', '127.0.0.1']
+
 if DEBUG:
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+    ALLOWED_HOSTS = [] + INTERNAL_IPS
 else:
     ALLOWED_HOSTS = ['*']
 
@@ -31,7 +34,6 @@ INSTALLED_APPS = [
     'common.apps.CommonConfig'
 ]
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -44,14 +46,14 @@ MIDDLEWARE = [
 
 if DEBUG:
     INSTALLED_APPS.append('debug_toolbar')
-    MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware')
+    MIDDLEWARE = ['debug_toolbar.middleware.DebugToolbarMiddleware'] + MIDDLEWARE
 
 ROOT_URLCONF = 'project.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
