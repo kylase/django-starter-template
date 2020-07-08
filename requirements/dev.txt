@@ -1,6 +1,6 @@
 django-extensions==3.0.2
 django-debug-toolbar==2.2
-ipython==7.15.0
+ipython==7.16.1
 
 -r test.txt
 -r prod.txt
