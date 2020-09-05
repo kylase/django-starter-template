@@ -1,14 +1,12 @@
 import os
 
+from dotenv import load_dotenv
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-# for deployment guide
+load_dotenv()
 
-# Secret key has to be defined as environment variable
-SECRET_KEY = os.getenv('SECRET_KEY', None)
-if SECRET_KEY is None:
-    raise ValueError('SECRET_KEY is not set as environment variable')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # DEBUG is turned on in `dev` mode
 DEBUG = True if os.getenv('ENV') == 'dev' else False
@@ -73,7 +71,6 @@ WSGI_APPLICATION = 'project.wsgi.application'
 AUTH_USER_MODEL = 'common.CustomUser'
 
 # Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -84,7 +81,6 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -103,7 +99,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/2.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -117,6 +112,5 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
