@@ -1,6 +1,6 @@
-django-extensions==3.0.8
-django-debug-toolbar==2.2
-ipython==7.18.1
+django-extensions==3.1.0
+django-debug-toolbar==3.2
+ipython==7.19.0
 
 -r test.txt
 -r prod.txt
