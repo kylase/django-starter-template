@@ -1,5 +1,7 @@
 # Django Starter Template
 
+![Django CI](https://github.com/kylase/django-starter-template/actions/workflows/django.yml/badge.svg)
+
 This is a simple template for quick kickstart of Django projects. The dependencies required in this template are:
 1. `pytest`, `pytest-django`, `pytest-cov` for testing
 1. `django-extensions` and `ipython` for enhanced shell
