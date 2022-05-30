@@ -1,5 +1,5 @@
 django-debug-toolbar==3.2.2
-ipython==8.0.1
+ipython==8.4.0
 
 -r test.txt
 -r prod.txt
